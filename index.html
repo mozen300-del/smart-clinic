@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -5,56 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بوابة المريض وحجز المواعيد - Smart Clinic</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f0f2f5; margin: 0; padding: 0; direction: rtl; text-align: right; }
-        header { background-color: #2980b9; color: white; padding: 20px; text-align: center; font-size: 24px; font-weight: bold; }
-        .container { max-width: 800px; margin: 30px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h2 { color: #2c3e50; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px; }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 8px; font-weight: bold; color: #34495e; }
-        input, select { width: 100%; padding: 12px; border: 1px solid #bdc3c7; border-radius: 6px; font-size: 16px; box-sizing: border-box; }
-        button { background-color: #27ae60; color: white; border: none; padding: 12px 20px; font-size: 18px; border-radius: 6px; cursor: pointer; width: 100%; font-weight: bold; }
+        body { font-family: Tahoma, sans-serif; background-color: #f0f2f5; margin: 0; padding: 0; direction: rtl; text-align: right; }
+        header { background-color: #2980b9; color: white; padding: 20px; text-align: center; font-size: 22px; font-weight: bold; }
+        .container { max-width: 800px; margin: 30px auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h2 { color: #2c3e50; border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #34495e; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #bdc3c7; border-radius: 5px; font-size: 15px; box-sizing: border-box; }
+        button { background-color: #27ae60; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer; width: 100%; font-weight: bold; }
         button:hover { background-color: #219653; }
-        .nav-link { text-align: center; margin-top: 20px; }
-        .nav-link a { color: #2980b9; text-decoration: none; font-weight: bold; }
-        .nav-link a:hover { text-decoration: underline; }
+        /* شريط التنقل بين الواجهات */
+        .navbar { background: #34495e; padding: 10px; text-align: center; margin-bottom: 20px; border-radius: 5px; }
+        .navbar a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 14px; }
+        .navbar a:hover { color: #3498db; }
     </style>
 </head>
 <body>
 
     <header>نظام العيادة الذكية - بوابة المريض (Patient Portal)</header>
 
+    <!-- شريط الانتقال بين واجهات النظام -->
+    <div class="navbar">
+        <a href="index.html">🏠 بوابة المريض</a>
+        <a href="doctor.html">👨‍⚕️ لوحة تحكم الطبيب</a>
+        <a href="admin.html">📊 لوحة الإدارة</a>
+    </div>
+
     <div class="container">
         <h2>📅 حجز موعد مع الطبيب</h2>
         
         <div class="form-group">
             <label>اسم المريض:</label>
-            <input type="text" id="patientName" placeholder="أدخل اسمك الرباعي" value="محمد أحمد">
+            <input type="text" placeholder="أدخل اسمك" value="محمد أحمد">
         </div>
         
         <div class="form-group">
             <label>السجل المرضي (Health History):</label>
-            <input type="text" id="healthHistory" placeholder="أدخل أي ملاحظات طبية سابقة" value="فحص دوري">
+            <input type="text" placeholder="ملاحظات طبية" value="فحص دوري وضغط الدم">
         </div>
 
         <div class="form-group">
-            <label>اختر التخصص وطبيب العيادة:</label>
-            <select id="doctorSelect">
-                <option>د. أحمد خالد - أمراض القلب (Cardiology)</option>
-                <option>د. سارة علي - الباطنية (Internal Medicine)</option>
-                <option>د. عمر حسن - الأطفال (Pediatrics)</option>
+            <label>اختر التخصص والطبيب:</label>
+            <select>
+                <option>د. أحمد خالد - أمراض القلب</option>
+                <option>د. سارة علي - الباطنية</option>
+                <option>د. عمر حسن - الأطفال</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label>تاريخ ووقت الموعد المقترح:</label>
-            <input type="datetime-local" id="appointmentDate">
+            <label>تاريخ ووقت الموعد:</label>
+            <input type="datetime-local">
         </div>
 
-        <button onclick="alert('تم إرسال طلب الحجز بنجاح، في انتظار تأكيد النظام!')">تأكيد حجز الموعد</button>
-
-        <div class="nav-link">
-            <p>هل أنت طبيب؟ <a href="doctor.html">انتقل إلى لوحة تحكم الطبيب (Doctor Dashboard)</a></p>
-        </div>
+        <button onclick="alert('تم إرسال طلب الحجز بنجاح!')">تأكيد حجز الموعد</button>
     </div>
 
 </body>
