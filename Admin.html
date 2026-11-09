@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم الإدارة - Smart Clinic</title>
+    <style>
+        body { font-family: Tahoma, sans-serif; background-color: #eef2f3; margin: 0; padding: 0; direction: rtl; text-align: right; }
+        header { background-color: #2c3e50; color: white; padding: 20px; text-align: center; font-size: 22px; font-weight: bold; }
+        .container { max-width: 900px; margin: 30px auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h2 { color: #2c3e50; border-bottom: 2px solid #bdc3c7; padding-bottom: 8px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 25px; }
+        .stat-card { background: #f8f9fa; border: 1px solid #d5dbdb; padding: 15px; border-radius: 6px; text-align: center; }
+        .stat-card h3 { margin: 0; color: #7f8c8d; font-size: 14px; }
+        .stat-card p { font-size: 20px; font-weight: bold; color: #2980b9; margin: 5px 0 0 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: right; }
+        th { background-color: #34495e; color: white; }
+        .nav-links { margin-top: 20px; text-align: center; }
+        .nav-links a { margin: 0 10px; color: #2980b9; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>لوحة تحكم الإدارة (Admin Dashboard)</header>
+
+    <div class="container">
+        <h2>📊 إحصائيات ونظرة عامة على النظام</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>إجمالي المرضى</h3>
+                <p>1,240</p>
+            </div>
+            <div class="stat-card">
+                <h3>الأطباء النشطون</h3>
+                <p>15</p>
+            </div>
+            <div class="stat-card">
+                <h3>مواعيد اليوم</h3>
+                <p>48</p>
+            </div>
+        </div>
+
+        <h2>📋 متابعة كافة ححوزات العيادة</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>رقم الموعد</th>
+                    <th>المريض</th>
+                    <th>الطبيب المعالج</th>
+                    <th>التاريخ والوقت</th>
+                    <th>الحالة</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#A300</td>
+                    <td>محمد أحمد</td>
+                    <td>د. أحمد خالد (قلب)</td>
+                    <td>2026-11-15 | 10:00 AM</td>
+                    <td>مؤكد</td>
+                </tr>
+                <tr>
+                    <td>#A301</td>
+                    <td>فاطمة عثمان</td>
+                    <td>د. سارة علي (باطنية)</td>
+                    <td>2026-11-15 | 11:30 AM</td>
+                    <td>معلق</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="nav-links">
+            <p>الانتقال إلى: <a href="index.html">بوابة المريض</a> | <a href="doctor.html">لوحة الطبيب</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
