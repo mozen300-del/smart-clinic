@@ -16,13 +16,22 @@
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
         th, td { border: 1px solid #ddd; padding: 10px; text-align: right; }
         th { background-color: #34495e; color: white; }
-        .nav-links { margin-top: 20px; text-align: center; }
-        .nav-links a { margin: 0 10px; color: #2980b9; text-decoration: none; font-weight: bold; }
+        /* شريط التنقل الموحد بين الصفحات */
+        .navbar { background: #34495e; padding: 10px; text-align: center; margin-bottom: 20px; border-radius: 5px; }
+        .navbar a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 14px; }
+        .navbar a:hover { color: #3498db; }
     </style>
 </head>
 <body>
 
     <header>لوحة تحكم الإدارة (Admin Dashboard)</header>
+
+    <!-- شريط الانتقال بين واجهات النظام -->
+    <div class="navbar">
+        <a href="index.html">🏠 بوابة المريض</a>
+        <a href="doctor.html">👨‍⚕️ لوحة تحكم الطبيب</a>
+        <a href="admin.html">📊 لوحة الإدارة</a>
+    </div>
 
     <div class="container">
         <h2>📊 إحصائيات ونظرة عامة على النظام</h2>
@@ -42,7 +51,7 @@
             </div>
         </div>
 
-        <h2>📋 متابعة كافة ححوزات العيادة</h2>
+        <h2>📋 متابعة كافة حجوزات العيادة</h2>
         <table>
             <thead>
                 <tr>
@@ -70,10 +79,6 @@
                 </tr>
             </tbody>
         </table>
-
-        <div class="nav-links">
-            <p>الانتقال إلى: <a href="index.html">بوابة المريض</a> | <a href="doctor.html">لوحة الطبيب</a></p>
-        </div>
     </div>
 
 </body>
