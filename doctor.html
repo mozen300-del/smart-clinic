@@ -7,36 +7,39 @@
     <style>
         body { font-family: Tahoma, sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; direction: rtl; text-align: right; }
         header { background-color: #16a085; color: white; padding: 20px; text-align: center; font-size: 22px; font-weight: bold; }
-        .container { max-width: 800px; margin: 30px auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .navbar { background: #34495e; padding: 10px; text-align: center; }
+        .navbar a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 14px; }
+        .container { max-width: 800px; margin: 20px auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         h2 { color: #2c3e50; border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; }
         .card { background: #fdfefe; border: 1px solid #d5dbdb; border-right: 5px solid #16a085; padding: 15px; margin-bottom: 15px; border-radius: 6px; }
         .card h3 { margin-top: 0; color: #16a085; }
         .status { color: #e67e22; font-weight: bold; }
         .btn { background-color: #2980b9; color: white; border: none; padding: 8px 12px; font-size: 14px; border-radius: 4px; cursor: pointer; margin-top: 8px; }
-        .btn:hover { background-color: #1f618d; }
+        .ethics-box { background: #f4ecf7; border-right: 4px solid #8e44ad; padding: 10px; margin-bottom: 15px; font-size: 13px; color: #6c3483; }
     </style>
 </head>
 <body>
 
     <header>لوحة تحكم الطبيب (Doctor Dashboard)</header>
 
+    <div class="navbar">
+        <a href="index.html">🏠 بوابة المريض</a>
+        <a href="doctor.html">👨‍⚕️ لوحة الطبيب</a>
+        <a href="admin.html">📊 لوحة الإدارة</a>
+    </div>
+
     <div class="container">
-        <h2>المواعيد الطبية القادمة</h2>
+        <div class="ethics-box">
+            <strong>معايير الأمان وأخلاقيات البرمجيات (Software Ethics):</strong> يتم عرض السجلات الطبية وفقاً لمعايير الخصوصية الصارمة وحظر تداول بيانات المرضى خارج نطاق التصريح.
+        </div>
+
+        <h2>المواعيد الطبية وقائمة المهام (Sprint Backlog)</h2>
         
         <div class="card">
             <h3>الموعد رقم: #A300</h3>
             <p><strong>اسم المريض:</strong> محمد أحمد</p>
-            <p><strong>التاريخ والوقت:</strong> 2026-11-15 | 10:00 AM</p>
             <p><strong>الحالة:</strong> <span class="status">مؤكد</span></p>
-            <button class="btn" onclick="alert('جاري عرض السجل الطبي للمريض...')">عرض السجل الطبي</button>
-        </div>
-        
-        <div class="card">
-            <h3>الموعد رقم: #A301</h3>
-            <p><strong>اسم المريض:</strong> فاطمة عثمان</p>
-            <p><strong>التاريخ والوقت:</strong> 2026-11-15 | 11:30 AM</p>
-            <p><strong>الحالة:</strong> <span class="status">في انتظار التأكيد</span></p>
-            <button class="btn" onclick="alert('تم تأكيد الموعد بنجاح!')">تأكيد الموعد</button>
+            <button class="btn" onclick="alert('تم استعراض السجل الطبي بسرية تامة.')">عرض السجل الطبي المشفر</button>
         </div>
     </div>
 
