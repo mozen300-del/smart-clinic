@@ -1,0 +1,69 @@
+# نظام العيادة الذكية (Smart Clinic System)
+
+class User:
+    def __init__(self, user_id, email, password):
+        self.user_id = user_id
+        self.email = email
+        self.password = password
+
+    def login(self):
+        print(f"User {self.email} logged in successfully.")
+
+
+class Patient(User):
+    def __init__(self, user_id, email, password, patient_id, health_history):
+        super().__init__(user_id, email, password)
+        self.patient_id = patient_id
+        self.health_history = health_history
+
+    def request_schedule(self):
+        print(f"Patient {self.patient_id} requested an appointment schedule.")
+
+
+class Doctor(User):
+    def __init__(self, user_id, email, password, doctor_id, specialization, schedule):
+        super().__init__(user_id, email, password)
+        self.doctor_id = doctor_id
+        self.specialization = specialization
+        self.schedule = schedule
+
+    def view_records(self, patient):
+        print(f"Doctor {self.doctor_id} viewing records for patient {patient.patient_id}.")
+
+
+class Appointment:
+    def __init__(self, appointment_id, date_time, status):
+        self.appointment_id = appointment_id
+        self.date_time = date_time
+        self.status = status
+
+    def schedule_appointment(self):
+        self.status = "Scheduled"
+        print(f"Appointment {self.appointment_id} has been scheduled.")
+
+    def confirm_appointment(self):
+        self.status = "Confirmed"
+        print(f"Appointment {self.appointment_id} is confirmed.")
+
+
+class MedicalReport:
+    def __init__(self, record_id, diagnosis, prescription):
+        self.record_id = record_id
+        self.diagnosis = diagnosis
+        self.prescription = prescription
+
+
+# تجربة النظام (Test Run)
+if __name__ == "__main__":
+    # إنشاء مريض وطبيب وموعد
+    patient1 = Patient("U001", "patient@clinic.com", "12345", "P100", "Allergic to penicillin")
+    doctor1 = Doctor("U002", "doctor@clinic.com", "abcde", "D200", "Cardiology", "Mon-Wed 9AM-1PM")
+    
+    patient1.login()
+    patient1.request_schedule()
+    
+    appointment1 = Appointment("A300", "2026-11-15 10:00 AM", "Pending")
+    appointment1.schedule_appointment()
+    appointment1.confirm_appointment()
+    
+    doctor1.view_records(patient1)
